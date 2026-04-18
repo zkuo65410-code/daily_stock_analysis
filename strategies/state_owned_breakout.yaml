@@ -1,0 +1,20 @@
+name: hot_sector_state_owned_breakout
+display_name: 热门板块国资首板策略
+description: 跟随每日热门板块，捕捉2-13元、10-150亿市值的国资首板股
+category: momentum
+required_tools:
+  - get_realtime_quote
+  - get_sector_rankings
+  - get_capital_flow
+  - get_company_news
+  - get_technical_indicators
+instructions: |
+  1. 每日自动抓取涨幅前10的热门行业和概念板块
+  2. 从中筛选总市值10-150亿、股价2-13元的国资背景个股
+  3. 要求量比≥1.5、股价站稳MA20均线，排除ST/退市股
+  4. 排除近3个月有减持计划、近1季净利润同比下滑超50%的个股
+  5. 锁定板块内首只涨超3%的标的，且1分钟主力净流入≥300万
+  6. 仅选近30日无涨停记录的首板标的，满足条件立即预警
+default_active: true
+default_priority: 10
+market_regimes: [trending_up, sideways]
