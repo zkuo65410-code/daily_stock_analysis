@@ -19,13 +19,6 @@ default_active: true
 default_priority: 10
 market_regimes: [trending_up, sideways]
 STOCK_LIST: [
-  "600743",
-  "603815",
-  "000056",
-  "002033",
-  "002217",
-  "002663",
-  "300267",
-  "300736"
+ 
 ]
 
